@@ -76,7 +76,7 @@ body {
 }
 
 .section-space {
-    padding: 110px 0
+    padding: 50px 0
 }
 
 .hero {
@@ -113,12 +113,12 @@ body {
 }
 
 .hero-title {
-    font-family: Poppins;
-    font-size: clamp(42px, 6vw, 75px);
+        font-family: Poppins;
+    font-size: revert-rule;
     line-height: 1.04;
     letter-spacing: -3px;
     margin: 0 0 25px;
-    font-weight: 800
+    font-weight: 700;
 }
 
 .hero-title span {
