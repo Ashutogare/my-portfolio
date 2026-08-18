@@ -23,11 +23,11 @@ window.addEventListener("load", () => {
   });
 
   gsap.to(".profile-card", {
-    y:-10,
-    duration:2.2,
-    repeat:-1,
-    yoyo:true,
-    ease:"sine.inOut"
+    y: -15,
+    duration: 2.5,
+    ease: "sine.inOut",
+    repeat: -1,
+    yoyo: true  
   });
 
   gsap.utils.toArray(".reveal").forEach((el) => {
