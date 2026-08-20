@@ -229,17 +229,25 @@ body {
     position: relative
 }
 .profile-card {
-    position: relative;
+  position: relative;
     padding: 28px;
     border-radius: 24px;
-    background: rgba(255, 255, 255, 0.025);
-    backdrop-filter: blur(18px) saturate(120%);
-    -webkit-backdrop-filter: blur(18px) saturate(120%);
-    border: 1px solid rgba(255, 255, 255, 0.14);
 
+    /* Transparent glass */
+    background: rgba(255, 255, 255, 0.025);
+
+    /* Frosted glass */
+        /* backdrop-filter: blur(8px) saturate(120%);
+        -webkit-backdrop-filter: blur(8px) saturate(120%); */
+
+    /* Thin glass edge */
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    /* Glass depth */
     box-shadow:
-        inset 0 1px 1px rgba(255, 255, 255, 0.12),
-        inset 0 -1px 1px rgba(255, 255, 255, 0.03);
+        0 20px 50px rgba(0, 0, 0, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.45),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.08);
 
     overflow: visible;
     z-index: 2;
@@ -254,12 +262,11 @@ body {
 
     background:
         linear-gradient(
-            125deg,
-            rgba(255, 255, 255, 0.10) 0%,
-            rgba(255, 255, 255, 0.025) 18%,
-            transparent 40%,
-            transparent 70%,
-            rgba(255, 255, 255, 0.025) 100%
+            135deg,
+            rgba(255,255,255,0.12) 0%,
+            transparent 25%,
+            transparent 75%,
+            rgba(255,255,255,0.04) 100%
         );
 
     pointer-events: none;
@@ -275,15 +282,16 @@ body {
     inset: 1px;
     border-radius: 23px;
 
-    border: 1px solid rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255,255,255,0.08);
 
     pointer-events: none;
     z-index: 1;
 }
 
+
 /* Keep all content above the glass effect */
 .profile-card > * {
-   position: relative;
+    position: relative;
     z-index: 3;
 }
 
@@ -318,19 +326,18 @@ body {
 }
 .code-window {
   margin-top: 22px;
-  padding: 20px;
-  border-radius: 16px;
+    padding: 20px;
+    border-radius: 16px;
 
-  background: rgba(10, 10, 25, 0.35);
+    /* background: rgba(5, 10, 25, 0.18);
 
-  border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px); */
 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.30);
 
-  box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.3),
-    0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.20);
 }
 
 .window-dots {
@@ -411,7 +418,7 @@ body {
 
 .glass-card {
     background: rgba(255, 255, 255, .035);
-    border: 1px solid rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, 0.55);
     border-radius: 22px;
     padding: 30px
 }
@@ -433,7 +440,7 @@ body {
     padding: 8px 11px;
     border-radius: 30px;
     background: rgba(139, 108, 255, .08);
-    border: 1px solid rgba(139, 108, 255, .16);
+    border: 1px solid rgba(255, 255, 255, 0.55);
     color: #c6bdff
 }
 
@@ -466,7 +473,7 @@ body {
 .skill-card {
     height: 100%;
     padding: 24px;
-    border: 1px solid rgba(255, 255, 255, .08);
+    border:1px solid rgba(255, 255, 255, 0.55);
     background: rgba(255, 255, 255, .025);
     border-radius: 18px;
     transition: .3s
@@ -552,19 +559,21 @@ body {
     white-space: nowrap
 }
 
-.timeline-content ul {
-    margin: 20px 0 0;
-    padding-left: 18px;
-    color: #91949e;
-    font-size: 13px;
-    line-height: 1.8
+.timeline-content {
+    min-height: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
 }
 
+.timeline-content ul {
+    flex: 1;
+}
 .project-card {
     height: 100%;
     min-height: 190px;
     padding: 25px;
-    border: 1px solid rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, 0.55);
     background: linear-gradient(145deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .018));
     border-radius: 20px;
     display: flex;
@@ -637,7 +646,7 @@ body {
     text-align: center;
     padding: 85px 25px;
     border-radius: 30px;
-    border: 1px solid rgba(139, 108, 255, .2);
+    border: 1px solid rgba(255, 255, 255, 0.55);
     background: radial-gradient(circle at 50% 0, rgba(128, 103, 255, .16), transparent 50%), rgba(255, 255, 255, .025)
 }
 
